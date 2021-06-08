@@ -54,15 +54,31 @@
         </div>
     </nav>
     <div class="login-form">
-        <h1>Login</h1>
-        <form id="contact-form">
+        <h1>REGISTRO</h1>
+        <form id="formulario1" method="POST">
             <!-- USERNAME INPUT -->
-            <label for="username">Usuario</label>
-            <input type="text" name="name" id="name" placeholder="Introduzca su usuario" class="requiered">
+            <label for="id_txtNombre">Usuario</label>
+            <input type="text" name="txtnombre" id="id_txtNombre" placeholder="Introduzca su usuario" class="requiered">
+
             <!-- PASSWORD INPUT -->
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" placeholder="Introduzca su contraseña">
+            <label for="id_txtContrasena">Contraseña</label>
+            <input type="password" name="txtContrasena" id="id_txtContrasena" placeholder="Introduzca su contraseña">
+
+            <!-- PASSWORD INPUT -->
+            <label for="id_txtRepetirConstrasena">Repetir contraseña</label>
+            <input type="password" name="txtRepetirContrasena" id="id_txtRepetirContrasena" placeholder="Introduzca su contraseña">
+
+            <!-- EMAIL INPUT -->
+            <label for="id_txtEmail">Email</label>
+            <input type="text" name="txtEmail" id="id_txtEmail" placeholder="Introduzca su usuario" class="requiered">
+
+            <!-- REPETIR EMAIL INPUT -->
+            <label for="id_txtRepetirEmail">Repetir Email</label>
+            <input type="text" name="txtRepetirEmail" id="id_txtRepetirEmail" placeholder="Introduzca su usuario" class="requiered">
+
+            <!-- BUTTON LOG IN -->
             <input type="submit" value="Log In">
+            <!--------------->
             <a href="#">Olvidaste tu contraseña?</a><br>
             <a href="Registrar.html">Registar</a>
         </form>
@@ -85,7 +101,7 @@
         integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
         crossorigin="anonymous"></script>
     <!-- JS -->
-    <script src="../js/login.js"></script>
+    <script src="../js/vregistro.js"></script>
 </body>
 
 </html>
