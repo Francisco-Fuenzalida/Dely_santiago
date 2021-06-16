@@ -4,7 +4,7 @@ $("#formulario1").validate({
   rules: {
     txtnombre: {
       required: true,
-      minlength: 2,
+      minlength: 3,
     },
     txtnombreusuario: {
       required: true,
@@ -13,6 +13,10 @@ $("#formulario1").validate({
     txtEmail: {
       required: true,
       email: true,
+    },
+    txtRepetirEmail: {
+      required: true,
+      equalTo: "#id_txtEmail",
     },
     txtContrasena: {
       required: true,
@@ -36,31 +40,18 @@ $("#formulario1").validate({
       required: "Ingrese email",
       email: "No cumple formato",
     },
+    txtRepetirEmail: {
+      required: "Repita el email",
+      equalTo: "Los emails no coinciden",
+    },
     txtContrasena: {
       required: "Ingrese la contraseña",
       minlength: "Mínimo 5 caracteres",
     },
     txtRepetirContrasena: {
       required: "Repita la contraseña",
-      equalTo: "Debe ser igual al campo contraseña",
-    },
-  }, //-->Fin de mensajes
-});
-$("#iniciosesion").validate({
-  rules: {
-    txtusuario: {
-      required: true,
-    },
-    txtcontrasena: {
-      required: true,
-    },
+      equalTo: "Las contraseñas no coinciden",
+    }, 
   },
-  messages: {
-    txtusuario: {
-      required: "Ingrese nombre de usuario o correo",
-    },
-    txtcontrasena: {
-      required: "Falta contraseña",
-    },
-  }, //-->Fin de mensajes
+  errorElement : 'div'
 });

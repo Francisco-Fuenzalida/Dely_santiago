@@ -14,17 +14,18 @@
     <!-- Font Cinzel -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Login</title>
+    {% load static %}
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'delySantiago/css/style.css' %}">
+    <title>Dely Santiago</title>
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">Dely Santiago</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Dely Santiago</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -33,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto my-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tienda</a>
@@ -47,25 +48,30 @@
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a id="login" class="nav-link" href="login.html">Login</a>
+                        <a id="login" class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="login-form">
-        <h1>Login</h1>
-        <form id="contact-form">
-            <!-- USERNAME INPUT -->
-            <label for="username">Usuario</label>
-            <input type="text" name="name" id="name" placeholder="Introduzca su usuario" class="requiered">
-            <!-- PASSWORD INPUT -->
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" placeholder="Introduzca su contraseña">
-            <input type="submit" value="Log In">
-            <a href="#">Olvidaste tu contraseña?</a><br>
-            <a href="Registrar.html">Registar</a>
-        </form>
+        {% block contenido %}
+
+        {% endblock %}
+        <!-- Footer -->
+        <div class="row footer">
+            <div class="col-sm-4 footer-logo">
+                <h1>Dely Santiago</h1>
+            </div>
+            <div class="col-sm-4 footer-num">
+                <h2>+569 51 23 56 23</h2>
+            </div>
+            <div class="col-sm-4 footer-icons">
+                <img class="footer-ico" src="{% static 'delySantiago/ico/facebook.svg' %}" alt="...">
+                <img class="footer-ico" src="{% static 'delySantiago/ico/instagram.svg' %}" alt="...">
+                <img class="footer-ico" src="{% static 'delySantiago/ico/twiter.svg' %}" alt="...">
+            </div>
+        </div>
+
     </div>
     <!-- Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -75,17 +81,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
-
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- JQuery Validate -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
-        integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
-        crossorigin="anonymous"></script>
-    <!-- JS -->
-    <script src="../js/login.js"></script>
+    {% block js %}
+    {% endblock %}
 </body>
 
 </html>

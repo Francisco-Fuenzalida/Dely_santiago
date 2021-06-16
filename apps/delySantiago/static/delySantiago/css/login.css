@@ -33,7 +33,6 @@ body {
 
 .login-form {
     width: 500px;
-    height: 480px;
     background: #000;
     color: #fff;
     top: 50%;
@@ -58,11 +57,11 @@ body {
     font-weight: bold;
     display: block;
     font-family: 'Cinzel', serif;
+    margin-top: 20px;
 }
 
 .login-form input {
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .login-form input[type="text"], .login-form input[type="password"] {
@@ -84,6 +83,8 @@ body {
     font-size: 18px;
     border-radius: 20px;
     font-family: 'Cinzel', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .login-form input[type="submit"]:hover {
@@ -105,7 +106,11 @@ body {
 
 div.error {
     color: #b80f22;
-    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    visibility: hidden;
 }
 
 @media screen and (max-width:280px) {
