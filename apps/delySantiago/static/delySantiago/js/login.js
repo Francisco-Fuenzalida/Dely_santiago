@@ -7,17 +7,17 @@ $(document).ready(function () {
             },
             password: {
                 required: true,
-                minlength: 6
+                minlength: 4
             },
         },
         messages: {
             name: {
                 required: "Ingrese usuario",
-                minlength: "Largo minimo 6 caracteres"
+                minlength: "Largo minimo 3 caracteres"
             },
             password: {
                 required: "Ingrese contraseña",
-                minlength: "Largo minimo 6 caracteres"
+                minlength: "Largo minimo 4 caracteres"
             }
         },
         errorElement : 'div'
