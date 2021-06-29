@@ -16,11 +16,6 @@
             <a href="{% url 'registrar' %}">Registar</a>
         </form>
     </div>
-    {% if messages %}
-        {% for m in messages %}
-            {{m}}
-        {% endfor %}
-    {% endif %}
 </div>
 {% endblock %}
 {% block js %}
