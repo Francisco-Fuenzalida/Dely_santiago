@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202020;
+}
+
+.mensaje {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar {
+    background-color: #202020;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-family: 'Courgette', cursive;
+}
+
+.nav-link {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+}
+
+#login {
+    color: #358007;
+}
+
+.footer {
+    background-color: black;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+    color: white;
+    font-family: 'Courgette', cursive;
+}
+
+.footer h1 {
+    font-size: 40px;
+    padding-left: 100px;
+}
+
+.footer-num {
+    text-align: center;
+}
+
+.footer-icons {
+    text-align: end;
+    padding-right: 100px;
+}
+
+.footer-ico {
+    width: 40px;
+    margin: 10px;
+}
+
+@media screen and (max-width:280px) {
+    .navbar-brand {
+        font-size: 19px;
+    }
+    .nav-link {
+        font-size: 15px;
+    }
+    .ico {
+        width: 18px;
+    }
+    .footer h1 {
+        font-size: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .footer-icons {
+        text-align: end;
+        padding-right: 0px;
+        text-align: center;
+    }
+    .footer-ico {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .navbar-brand {
+        font-size: 26px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .ico {
+        width: 18px;
+    }
+    .footer h1 {
+        font-size: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .footer-icons {
+        text-align: end;
+        padding-right: 0px;
+        text-align: center;
+    }
+    .footer-ico {
+        width: 30px;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1086px) {
+    .navbar-brand {
+        font-size: 45px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .ico {
+        width: 18px;
+    }
+    .footer h1 {
+        font-size: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .footer-icons {
+        text-align: end;
+        padding-right: 0px;
+        text-align: center;
+    }
+    .footer-ico {
+        width: 30px;
+    }
+}

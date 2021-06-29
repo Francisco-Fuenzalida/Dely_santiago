@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'registro/css/agregar.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+    <br><br>
+    <h1 class="d-flex justify-content-center">Agregar Plato</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{ form }}
+        <br><br>
+        <div class="d-flex justify-content-center">
+            <input type="reset" value="Limpiar" class="btn btn-secondary">
+            &nbsp;&nbsp;
+            <input type="submit" value="Grabar" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

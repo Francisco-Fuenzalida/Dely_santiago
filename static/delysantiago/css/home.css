@@ -1,0 +1,142 @@
+.carousel-inner img {
+    height: 550px;
+    object-fit: cover;
+}
+
+#platos-destacados {
+    background-color: #202020;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    padding: 10px;
+}
+
+.platos {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.plato {
+    margin: 20px;
+    padding: 20px;
+    background-color: #DAD4D4;
+    height: 340px;
+    text-align: center;
+}
+
+.plato>img {
+    width: 230px;
+    height: 150px;
+}
+
+.nombre-producto {
+    color: black;
+    font-family: 'Times New Roman', bold;
+    font-size: 23px;
+}
+
+.precio {
+    color: black;
+    font-family: 'Times New Roman', bold;
+    font-size: 25px;
+}
+
+.ico {
+    height: 30px;
+}
+
+button {
+    width: 120px;
+    font-family: bold;
+}
+
+.btn-comprar button {
+    background-color: #358007;
+}
+
+.btn-detalle button {
+    background-color: #EF7F08;
+}
+
+@media screen and (max-width:280px) {
+    .carousel-inner img {
+        height: 200px;
+    }
+    .platos {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .plato {
+        margin: 5px;
+        padding: 5px;
+        height: 230px;
+    }
+    .plato>img {
+        width: 130px;
+        height: 100px;
+    }
+    .nombre-producto {
+        font-size: 18px;
+    }
+    .precio {
+        font-size: 13px;
+    }
+    button {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .carousel-inner img {
+        height: 300px;
+    }
+    .platos {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .plato {
+        margin: 5px;
+        padding: 5px;
+        height: 230px;
+    }
+    .plato>img {
+        width: 130px;
+        height: 100px;
+    }
+    .nombre-producto {
+        font-size: 18px;
+    }
+    .precio {
+        font-size: 18px;
+    }
+    button {
+        width: 80px;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1086px) {
+    .carousel-inner img {
+        height: 300px;
+    }
+    .platos {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .plato {
+        margin: 5px;
+        padding: 5px;
+        height: 260px;
+    }
+    .plato>img {
+        width: 130px;
+        height: 100px;
+    }
+    .nombre-producto {
+        font-size: 23px;
+    }
+    .precio {
+        font-size: 19px;
+    }
+    button {
+        width: 100px;
+    }
+}

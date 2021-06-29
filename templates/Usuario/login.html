@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<!-- CSS -->
+<link rel="stylesheet" href="{% static 'usuario/css/login.css' %}">
+{% endblock %}
+{% block contenido %}
+<div class="contenido">
+    <div class="login-form">
+        <h1>Login</h1>
+        <form id="contact-form" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Ingresar">
+            <a href="#">Olvidaste tu contraseña?</a><br>
+            <a href="{% url 'registrar' %}">Registar</a>
+        </form>
+    </div>
+    {% if messages %}
+        {% for m in messages %}
+            {{m}}
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
+{% block js %}
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<!-- JQuery Validate -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+    integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+    crossorigin="anonymous"></script>
+<!-- JS -->
+<script src="{% static 'usuario/js/login.js' %}"></script>
+{% endblock %}

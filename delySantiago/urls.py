@@ -1,4 +1,4 @@
-"""delySantiago URL Configuration
+"""DelySantiago URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -14,10 +14,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include 
+from django.urls import path, include
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import views as auth_views
+from django.views.generic import TemplateView
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apps.delySantiago.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('delysantiago', include('apps.DelySantiago.urls')),
+    path('registro/', include('apps.Registro.urls')),
+    path('usuario/', include('apps.Usuario.urls')),
+    # Login and Logout
+    path('login/', LoginView.as_view(redirect_authenticated_user=True,template_name='Usuario/login.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='Usuario/logout.html'), name='logout'),
+    path('', TemplateView.as_view(template_name='delysantiago/home.html'), name='home'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

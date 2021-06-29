@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'registro/css/listado.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+    <br><br>
+    <h1 class="d-flex justify-content-center">Listado de Proveedores</h1>
+    <br><br><br>
+    <table class="table table-striped table-hover table-responsive-sm">
+        <tr>
+            <th>Nombre</th>
+            <th>Correo Electronico</th>
+            <th>Numero Contacto</th>
+            <th>Opciones</th>
+        </tr>
+
+        {% for p in entity %}
+        <tr>
+            <td>{{ p.nombre | title }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.numero }}</td>
+            <td>
+                <a class="btn btn-warning" href="{% url 'editar_proveedor' p.id %}">Editar</a>&nbsp;&nbsp;
+                <!-- <a class="btn btn-danger" href="{% url 'eliminar_plato' p.id %}">Eliminar</a> -->
+                <a class="btn btn-danger" onclick="eliminarProveedor({{p.id}})" href="#">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <div>
+        {% include 'registro/paginator.html' %}
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+    function eliminarProveedor(id) {
+        Swal.fire({
+            "title": "¿Está seguro que decea Eliminar?",
+            "icon": "question",
+            "showCancelButton": true,
+            "cancelButtonText": "No, Cancelar",
+            "confirmButtonText": "Si, Eliminar",
+            "reverseButtons": true,
+            "confirmButtonColor": "#dc3545"
+        })
+            .then(function (result) {
+                if (result.isConfirmed) {
+                    window.location.href = "eliminar_proveedor/" + id + "/"
+                }
+            })
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,12 @@
+table, th, td {
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-family: 'Courgette', cursive;
+}
+
+.footer {
+    visibility: hidden;
+}

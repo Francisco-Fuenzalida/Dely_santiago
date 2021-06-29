@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'delysantiago/css/home.css' %}">
+{% endblock %}
+{% block contenido %}
+<h1> Platos </h1>
+<div class="row platos">
+    {% for p in platos %}
+    <div class="col-xl-4 col-sm-6 col-xs-12">
+        <div class="plato">
+            <img src="{{ p.imagen.url }}" alt="...">
+            <p class="nombre-producto">{{ p.nombre }}</p>
+            <p class="precio">${{ p.precio | intcomma }}</p>
+            <div class="row">
+                <div class="col-6 btn-detalle">
+                    <button><img class="ico" src="{% static 'delySantiago/ico/add-outline.svg' %}"
+                            alt="">Detalles</button>
+                </div>
+                <div class="col-6 btn-comprar">
+                    <button><img class="ico" src="{% static 'delySantiago/ico/cart-alt.svg' %}" alt="">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
